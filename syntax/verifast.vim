@@ -28,6 +28,8 @@ syn match vfOperator contained "&\*&"
 syn region vfAnnote start='//@' skip='\\$' end='$' contains=vfKeyword,vfOperator,cString,cConditional,cCharacter,cOctal,cOctalZero,cFloat,cError,cOperator,cStructure,cInclude,cPreProc,cDefine,cStatement,cType,cConstant,cString
 syn region vfAnnote start='/\*@' end='@\*/' contains=vfKeyword,vfOperator,cString,cConditional,cCharacter,cOctal,cOctalZero,cFloat,cError,cOperator,cStructure,cInclude,cPreProc,cDefine,cStatement,cType,cConstant,cString,cCommentL
 
+syn sync ccomment vfAnnote minlines=50
+
 " Name the syntax
 let b:current_syntax = "verifast"
 
